@@ -1,0 +1,24 @@
+language: cpp
+sudo: required
+dist: bionic
+
+os:
+  - linux
+  - osx
+
+compiler:
+  - gcc
+  - clang
+
+before_install:
+  - if [ $TRAVIS_OS_NAME == linux ]; then 
+      sudo apt-get update -qq;
+      sudo apt-get install -y --no-install-recommends libxrandr-dev libxi-dev libxxf86vm-dev libsdl2-dev;
+    fi
+
+script: 
+  - cmake -B_build -H. || true
+  - cmake --build _build --target gl3w_gen
+  - cmake -B_build -H.  # Second time for gl3w
+  - cmake --build _build --target imgui-flame-graph-example
+
