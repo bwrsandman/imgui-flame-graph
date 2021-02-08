@@ -17,8 +17,10 @@ before_install:
     fi
 
 script: 
-  - cmake -B_build -H. || true
-  - cmake --build _build --target gl3w_gen
-  - cmake -B_build -H.  # Second time for gl3w
-  - cmake --build _build --target imgui-flame-graph-example
+  - mkdir _build
+  - cd _build
+  - cmake .. || true
+  - make gl3w_gen
+  - cmake ..  # Second time for gl3w
+  - make imgui-flame-graph-example
 
