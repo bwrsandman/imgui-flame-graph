@@ -12,6 +12,7 @@ target_sources(${PROJECT_NAME} INTERFACE
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/imgui_widget_flamegraph.cpp>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/imgui_widget_flamegraph.h>)
 target_include_directories(${PROJECT_NAME} INTERFACE $<BUILD_INTERFACE:${IMGUI_FLAME_GRAPH_DIRECTORIES}>)
+target_compile_definitions(${PROJECT_NAME} INTERFACE IMGUI_DEFINE_MATH_OPERATORS)
 
 if(IMGUI_FLAME_GRAPH_BUILD_EXAMPLE)
     add_subdirectory(example/)
