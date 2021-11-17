@@ -1,6 +1,6 @@
 # Dear ImGui Flame Graph Widget
-[![Build Status](https://api.travis-ci.org/bwrsandman/imgui-flame-graph.svg?branch=master)](https://travis-ci.org/bwrsandman/imgui-flame-graph)
-[![Download](https://img.shields.io/badge/master-v1.00-green.svg)](https://github.com/bwrsandman/imgui-flame-graph/releases/tag/v1.00)
+[![Build](https://github.com/bwrsandman/imgui-flame-graph/actions/workflows/build.yml/badge.svg)](https://github.com/bwrsandman/imgui-flame-graph/actions/workflows/build.yml)
+[![Download](https://img.shields.io/badge/master-v1.01-green.svg)](https://github.com/bwrsandman/imgui-flame-graph/releases/tag/v1.01)
 [![License](https://img.shields.io/github/license/bwrsandman/imgui-flame-graph)](LICENSE.md)
 [![GitHub Stars](https://img.shields.io/github/stars/bwrsandman/imgui-flame-graph?logo=github)](https://github.com/bwrsandman/imgui-flame-graph/stargazers)
 [![DOI](https://zenodo.org/badge/216259198.svg)](https://zenodo.org/badge/latestdoi/216259198)

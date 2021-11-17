@@ -1,0 +1,29 @@
+name: Build
+on:
+  push:
+  pull_request:
+  schedule:
+  # * is a special character in YAML so you have to quote this string
+  - cron:  '45 8 * * *'
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        configuration: [Debug, Release]
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install OpenGL (Ubuntu)
+        if: matrix.os == 'ubuntu-latest'
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends libxrandr-dev libxi-dev libxxf86vm-dev libsdl2-dev
+      - name: Build Sample
+        run: |
+          cmake -B_build -S${{ github.workspace }} -DCMAKE_BUILD_TYPE=${{ matrix.configuration }}
+          cmake --build _build --target imgui-flame-graph-example
