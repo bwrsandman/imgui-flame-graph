@@ -107,8 +107,8 @@ void ImGuiWidgetFlameGraph::PlotFlame(const char* label, void (*values_getter)(f
             auto start = stageStart - scale_min;
             auto end = stageEnd - scale_min;
 
-            float startX = start / (double)duration;
-            float endX = end / (double)duration;
+            auto startX = static_cast<float>(start / (double)duration);
+            auto endX = static_cast<float>(end / (double)duration);
 
             float width = inner_bb.Max.x - inner_bb.Min.x;
             float height = blockHeight * (maxDepth - depth + 1) - style.FramePadding.y;
