@@ -9,8 +9,8 @@ FetchContent_MakeAvailable(imgui)
 
 FetchContent_Declare(
   SDL2
-  URL https://www.libsdl.org/release/SDL2-2.0.16.tar.gz
-  URL_HASH MD5=98b8a1535a757ea1d03ae44e2fb20247
+  URL https://www.libsdl.org/release/SDL2-2.26.5.tar.gz
+  URL_HASH MD5=47f22c109070431ecccd90abd3c0ab6e
 )
 FetchContent_MakeAvailable(SDL2)
 
