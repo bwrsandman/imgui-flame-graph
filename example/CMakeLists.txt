@@ -23,7 +23,7 @@ FetchContent_MakeAvailable(gl3w)
 
 file(GLOB EXTERNAL_SOURCE
     ${imgui_SOURCE_DIR}/*.cpp
-    ${imgui_SOURCE_DIR}/backends/imgui_impl_sdl.cpp
+    ${imgui_SOURCE_DIR}/backends/imgui_impl_sdl2.cpp
     ${imgui_SOURCE_DIR}/backends/imgui_impl_opengl3.cpp
 )
 add_executable(imgui-flame-graph-example main.cpp ${EXTERNAL_SOURCE})
