@@ -35,5 +35,5 @@ target_include_directories(imgui-flame-graph-example
         ${gl3w_BINARY_DIR}/include
 )
 target_link_libraries(imgui-flame-graph-example PRIVATE gl3w SDL2 imgui-flame-graph ${CMAKE_DL_LIBS})
-
 target_compile_definitions(imgui-flame-graph-example PRIVATE IMGUI_IMPL_OPENGL_LOADER_GL3W)
+target_compile_features(imgui-flame-graph-example PRIVATE cxx_constexpr)
