@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14 FATAL_ERROR)
 cmake_policy(SET CMP0076 NEW)
 
-project(imgui-flame-graph)
+project(imgui-flame-graph VERSION 1.02)
 
 option(IMGUI_FLAME_GRAPH_BUILD_EXAMPLE "Build an example using flame graph." ON)
 
